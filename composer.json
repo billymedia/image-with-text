@@ -1,15 +1,20 @@
 {
-    "name": "nmcteam/image-with-text",
+    "name": "nextbigleap/image-with-text",
     "type": "library",
     "description": "Create images with embedded text and advanced typography",
     "keywords": ["text","typeset","typography","write","image","gd"],
-    "homepage": "http://github.com/nmcteam/image-with-text",
+    "homepage": "http://github.com/nextbigleap/image-with-text",
     "license": "MIT",
     "authors": [
         {
             "name": "Josh Lockhart",
             "email": "josh@newmediacampaigns.com",
             "homepage": "http://www.newmediacampaigns.com/about/team/josh-lockhart"
+        },
+        {
+            "name": "Billy Patel",
+            "email": "billy@nextbigleap.com",
+            "homepage": "http://www.nextbigleap.com"
         }
     ],
     "require": {
