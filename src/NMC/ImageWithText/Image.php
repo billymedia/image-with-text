@@ -109,6 +109,17 @@ class Image
     }
 
     /**
+     * Save rendered image to output file
+     * @param string $outputImagePath The path to which the image (with text) will be saved
+     * @api
+     */
+    public function insert($imageObj,$x,$y,$anchor)
+    {
+        // $this->drawText();
+        return $this->image->insert($imageObj,$x,$y,$anchor);
+    }
+
+    /**
      * Get image width
      * @return int
      */
