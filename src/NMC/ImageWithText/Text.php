@@ -184,6 +184,14 @@ class Text
             $line['text'] = $lineText;
         }
 
+        $totalLines = 0;
+        for ($i = 0; $i < count($this->lines); $i++) {
+            // Fetch line
+            if (array_key_exists($i, $this->lines)) {
+                $totalLines++;
+            }
+        }
+
         // Calculate line offsets
         for ($i = 0; $i < count($this->lines); $i++) {
             // Fetch line
@@ -203,6 +211,15 @@ class Text
                     case 'center':
                         $imageWidth = $image->getWidth();
                         $offsetX = (($maxLineWidth - $lineWidth) / 2) + $this->startX;
+                        $offsetY = $this->startY + $this->lineHeight + ($this->lineHeight * $i);
+                        break;
+                    case 'center-out':
+                        $imageWidth = $image->getWidth();
+                        $offsetX = (($maxLineWidth - $lineWidth) / 2) + $this->startX;
+                        if($i == 0)
+                        {
+                            $this->startY = ($this->startY-(($totalLines*$this->lineHeight)/2)+$this->lineHeight/2);
+                        }
                         $offsetY = $this->startY + $this->lineHeight + ($this->lineHeight * $i);
                         break;
                     case 'right':
