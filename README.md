@@ -53,6 +53,7 @@ We have not written any unit tests just yet, but we hope to do that soon.
 ## Author
 
 [Josh Lockhart](http://www.newmediacampaigns.com/about/team/josh-lockhart)
+Modified by [Billy] (http://nextbigleap.com)
 
 ## Copyright
 
