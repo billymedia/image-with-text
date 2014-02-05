@@ -102,10 +102,13 @@ class Image
      * @param string $outputImagePath The path to which the image (with text) will be saved
      * @api
      */
-    public function render($outputImagePath)
+    public function render($outputImagePath,$drawtext = true)
     {
-        $this->drawText();
-        $this->image->save($outputImagePath);
+        if($drawtext)
+        {
+            $this->drawText();    
+        }
+        $this->image->save($outputImagePath,100);
     }
 
     /**
@@ -115,8 +118,13 @@ class Image
      */
     public function insert($imageObj,$x,$y,$anchor)
     {
-        // $this->drawText();
         return $this->image->insert($imageObj,$x,$y,$anchor);
+    }
+
+
+    public function resize($w,$h)
+    {
+        $this->image->resize($w,$h,true);
     }
 
     /**
